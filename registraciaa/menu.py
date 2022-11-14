@@ -1,20 +1,29 @@
 import registracia
 import login
-import os 
-import time
+import os
+import sys
+
 def menu():
-    os.system("cls")
-    print ("Welcome, are you a registered user ?")
-    question = input("Yes=1\nNo=0\n")
-    if question =="1":
-        login.login()
-        time.sleep(5)
-        menu()
-    elif question =="0":
-        registracia.registracia()
-        login.login()
-menu()
+    while True:
+        os.system("cls")
+        print("Welcome, are you a registered user ?")
+        question = input("Yes(y)\nNo(n)\n")
+        if question.lower() == "y" or question.lower() == "yes":
+            login.login()
+            continue
+        
+        if question.lower() == "n" or question.lower() == "no":
+            registracia.registracia()
+            login.login()
+            continue
+        
+        if question.lower() == "exit":
+            sys.exit(0)
+
+        # wrong answer
+
+        print("incorrect answer")
+        
 
 if __name__ == "__main__":
     menu()
-

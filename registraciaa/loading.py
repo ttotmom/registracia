@@ -1,20 +1,19 @@
 import time
 import os
+
 def loading():
-    for i in range(2):
+    for _ in range(3):
         os.system("cls")
-        print ("checking / \ndatabase")
+        print ("checking database /")
         time.sleep (0.25)
         os.system("cls")
-        print ("checking \ \ndatabase")
+        print ("checking database -")
         time.sleep (0.25)
         os.system("cls")
-        print ("checking\ndatabase / ")
+        print ("checking database \\")
         time.sleep (0.25)
         os.system("cls")
-        print ("checking\ndatabase \ ")
+        print ("checking database |")
         time.sleep (0.25)
         os.system("cls")
-
-
     
